@@ -6,3 +6,4 @@ for(let i = 0; i<16; i++){
     container.appendChild(cell);
 }
 // Find a way to make 16x16 grid of divs.
+// watch youtube video on js grids
