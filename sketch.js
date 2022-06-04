@@ -18,4 +18,6 @@ float/clear
 inline-block
 flexbox
 CSS Grid
+
+(Probably go with flexbox or CSS Grid but learn all 4 to get familiar with them)
 */
