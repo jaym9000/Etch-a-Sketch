@@ -4,12 +4,19 @@ h3{
     justify-content: center;
 }
 
-.container{
+/* .container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     border: solid;
-    
+} */
 
+.container{
+    display: grid;
+
+    grid-template-columns: repeat(16, 1.77%);
+    grid-template-rows: max-content;
+    justify-content: center;
+
+    border: solid;
 }
-
