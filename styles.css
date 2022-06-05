@@ -1,7 +1,15 @@
-.container{
-    /* display: flex;
+h1,
+h3{
+    display: flex;
     justify-content: center;
-    align-items: center; */
-    display: grid;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: solid;
+    
+
 }
 
