@@ -6,9 +6,6 @@ for(let i = 0; i<16; i++){
     container.appendChild(cell);
 }
 // Find a way to make 16x16 grid of divs.
-// watch youtube video on js grids 
-
-//cancel both comments above this and follow the next step.
 
 // using the container div in html, create 16x16 more divs using Javascript
 //after creating these divs, use CSS to make the divs look like a grid with the following options:
