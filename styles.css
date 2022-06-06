@@ -11,11 +11,14 @@ h3{
 
 /* Grid with 16x16 divs and border around it */
 .container{
-    box-sizing: border-box;
-    border: 1px solid;
+    /* box-sizing: border-box;
+    border: 3px solid; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-left: 348px;
     margin-right: 348px;
+    width: fit-content;
+    width: 288px;
+    border: 3px solid;
 }
