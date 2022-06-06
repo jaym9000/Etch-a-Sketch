@@ -4,14 +4,14 @@ h3{
     justify-content: center;
 }
 
-/* .container{
+.container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     border: solid;
-} */
+}
 
-.container{
+/* .container{
     display: grid;
 
     grid-template-columns: repeat(16, 1.77%);
@@ -19,4 +19,6 @@ h3{
     justify-content: center;
 
     border: solid;
-}
+} */
+
+/* Make flexbox fit inside grid */
