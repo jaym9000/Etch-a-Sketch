@@ -1,24 +1,21 @@
+html{
+    display: flex;
+    justify-content: center;
+}
+
 h1,
 h3{
     display: flex;
     justify-content: center;
 }
 
+/* Grid with 16x16 divs and border around it */
 .container{
+    box-sizing: border-box;
+    border: 1px solid;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    border: solid;
-}
-
-/* .container{
-    display: grid;
-
-    grid-template-columns: repeat(16, 1.77%);
-    grid-template-rows: max-content;
     justify-content: center;
-
-    border: solid;
-} */
-
-/* Make flexbox fit inside grid */
+    margin-left: 348px;
+    margin-right: 348px;
+}
