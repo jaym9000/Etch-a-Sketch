@@ -8,13 +8,19 @@ function divCreation(){
             cell.style.cssText = "border: 1px solid black; height: 16px; width: 16px";
             container.appendChild(cell);
 
-            // highlight the mouseenter target
-            cell.addEventListener("mouseenter", function( e ) {   
-                cell.style.backgroundColor = "red";
-                console.log("Works");
-            }, false);
+            hoverMouse(cell);
+            
         }
     }
 }
 
+function hoverMouse(box){
+    // highlight the mouseenter target
+    box.addEventListener("mouseenter", function( e ) {   
+        box.style.backgroundColor = "red";
+        console.log("Works");
+    }, false);
+}
+
 divCreation();
+
