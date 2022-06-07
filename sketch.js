@@ -18,7 +18,6 @@ function hoverMouse(box){
     // highlight the mouseenter target
     box.addEventListener("mouseenter", function( e ) {   
         box.style.backgroundColor = "red";
-        console.log("Works");
     }, false);
 }
 
