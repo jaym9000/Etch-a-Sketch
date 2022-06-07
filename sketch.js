@@ -7,14 +7,14 @@ function divCreation(){
             const cell = document.createElement("div");
             cell.style.cssText = "border: 1px solid black; height: 16px; width: 16px";
             container.appendChild(cell);
+
+            // highlight the mouseenter target
+            cell.addEventListener("mouseenter", function( e ) {   
+                cell.style.backgroundColor = "red";
+                console.log("Works");
+            }, false);
         }
     }
 }
 
-// function hoverMouse(){
-//     divCreation.addEventListener("mouseenter", divCreation(){
-//         divCreation.target.style.color = "red";
-//         console.log("Works");
-//     });
-// }
 divCreation();
