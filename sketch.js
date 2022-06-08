@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const resetBtn = document.querySelector(".btn");
 
 // for loop inside for loop creates a 16 x 16 div, css styling makes each square 16x16 with a solid black line
 function divCreation(){
@@ -23,3 +24,10 @@ function hoverMouse(box){
 
 divCreation();
 
+function reloadPage(){
+    resetBtn.addEventListener("click", function(e){
+        location.reload();
+    });
+}
+
+reloadPage();
