@@ -26,7 +26,9 @@ divCreation();
 
 function reloadPage(){
     resetBtn.addEventListener("click", function(e){
-        location.reload();
+        // location.reload();
+        document.getElementById("container-id").reset();
+
     });
 }
 
