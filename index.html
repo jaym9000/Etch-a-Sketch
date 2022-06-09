@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css" />
     <script src="sketch.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Etch-a-Sketch</h1>
     <h3>Hover your cursor over the box below to start drawing!</h3>
 
     <div class="same-line">
-        <!-- This box will contain size and color change features -->
-        <div class="side-box">
+      <!-- This box will contain size and color change features -->
+      <div class="side-box">
+        <!-- Slider for grid size -->
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="myRange"
+        />
 
-            <!-- Slider for grid size -->
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <button class="btn">Reset</button>
+      </div>
 
-            <button class="btn">Reset</button>
-        </div>
-
-        <!-- 16x16 grid of square divs -->
-        <form id="container=id">
-            <div class="container" id="container-id"></div>
-        </form>
+      <!-- 16x16 grid of square divs -->
+      <form id="container=id">
+        <div class="container"></div>
+      </form>
     </div>
-</body>
+  </body>
 </html>
