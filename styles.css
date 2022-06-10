@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   display: flex;
   justify-content: center;
@@ -7,4 +13,14 @@ h1,
 h3 {
   display: flex;
   justify-content: center;
+}
+
+.same-line {
+  display: flex;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(16, 25px [col-start]);
+  /* grid-template-rows: repeat(16, 25px [col-start]); */
 }
