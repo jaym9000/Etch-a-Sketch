@@ -3,7 +3,7 @@ const DEFAULT_GRID_SIZE = 16;
 const DEFAULT_HOVER_COLOR = "#87CEEB";
 
 // Declaring easier to use variables
-let size = DEFAULT_GRID_SIZE;
+let currentSize = DEFAULT_GRID_SIZE;
 
 // Reuseable methods
 function resize(newSize) {
@@ -12,8 +12,11 @@ function resize(newSize) {
 
 // Using DOM to get HTML Elements
 const container = document.getElementById("container");
+const btn = document.getElementById("btn");
+const btnn = document.createElement("div");
 
 // Event listeners
+btn.onclick = () => resetContainer();
 
 // All specific functions
 function createDiv(size) {
@@ -32,9 +35,20 @@ function createDiv(size) {
   }
 }
 
+// clears grid
+function clearContainer() {
+  container.innerHTML = "";
+}
+
+// clears grid and resets with a new grid of the same size as currently selected
+function resetContainer() {
+  clearContainer();
+  createDiv(currentSize);
+}
+
 // When page loads, this displays by default
 window.onload = () => {
-  createDiv(size);
+  createDiv(currentSize);
 };
 
 // createDiv(size);
