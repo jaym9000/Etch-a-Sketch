@@ -64,7 +64,7 @@ h3 {
 #container {
   display: grid;
   /* grid-template-columns: repeat(16, 25px [col-start]); */
-  /* border: 1px solid black; */
-  /* height: 500px;
-  width: 500px; */
+  border: 5px solid black;
+  width: 500px;
+  height: 500px;
 }

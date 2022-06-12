@@ -3,11 +3,11 @@ const DEFAULT_GRID_SIZE = 16;
 const DEFAULT_HOVER_COLOR = "#87CEEB";
 
 // SECTION: Declaring easier to use variables
-let currentSize = DEFAULT_GRID_SIZE;
+let defaultSize = DEFAULT_GRID_SIZE;
 
 // SECTION: Reuseable methods
-function resize(newSize) {
-  size = newSize;
+function resize() {
+  size = slider.value;
 }
 
 // SECTION: Using DOM to get HTML Elements
@@ -17,9 +17,9 @@ const slider = document.getElementById("sizeSlider");
 const gridSizeIndicator = document.getElementById("sizeVal");
 
 // SECTION: Event listeners
-btn.onclick = () => resetContainer();
+btn.onclick = (e) => resetContainer(slider.value);
 slider.onchange = (e) => gridSizeIndication(slider.value);
-// slider.onchange = (e) => changeGridSize(e);
+slider.onchange = (e) => changeGridSize(slider.value);
 
 // SECTION: All specific functions
 function createDiv(size) {
@@ -28,21 +28,17 @@ function createDiv(size) {
   container.style.gridTemplateRows = `repeat(${size}, 1fr`;
   for (let i = 0; i < size * size; i++) {
     const cell = document.createElement("div");
-    cell.style.cssText = "border: 1px solid black;";
-    let widthxheight = parseInt(402 / size);
-    cell.style.width = `${widthxheight}px`;
-    cell.style.height = `${widthxheight}px`;
     cell.classList.add("square");
     cell.addEventListener("mouseenter", hoverChangeColor);
     container.appendChild(cell);
-
-    //change color of div on hover(event listener above activates this function on the grid)
-    function hoverChangeColor() {
-      cell.style.backgroundColor = "#00BFFF";
-      console.log("Works");
-      //   console.log(slider.value);
-    }
   }
+}
+
+//change color of div on hover
+function hoverChangeColor(e) {
+  e.target.style.backgroundColor = "#00BFFF";
+  console.log("Works");
+  //   console.log(slider.value);
 }
 
 // clears grid
@@ -51,26 +47,23 @@ function clearContainer() {
 }
 
 // clears grid and resets with a new grid of the same size as currently selected
-function resetContainer() {
+function resetContainer(size) {
   clearContainer();
-  createDiv(currentSize);
+  createDiv(size);
 }
 
 function changeGridSize(size) {
   console.log(size);
-  gridSizeIndicator(size);
+  gridSizeIndication(size);
   clearContainer();
   createDiv(size);
 }
 
 function gridSizeIndication(size) {
-  //   gridSizeIndicator.innerHTML = "";
-  console.log("Hello");
-  console.log(size);
   gridSizeIndicator.innerHTML = `${size} X ${size}`;
 }
 
 // When page loads, this displays by default
 window.onload = () => {
-  createDiv(currentSize);
+  createDiv(defaultSize);
 };
