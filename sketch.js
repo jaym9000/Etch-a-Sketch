@@ -1,9 +1,10 @@
 // SECTION: Declaring const values
 const DEFAULT_GRID_SIZE = 16;
-const DEFAULT_HOVER_COLOR = "#87CEEB";
+const DEFAULT_COLOR = "#00BFFF";
 
 // SECTION: Declaring easier to use variables
 let defaultSize = DEFAULT_GRID_SIZE;
+let defaultColor = DEFAULT_COLOR;
 
 // SECTION: Reuseable methods
 function resize() {
@@ -38,7 +39,7 @@ function createDiv(size) {
 
 //change color of div on hover
 function hoverChangeColor(e) {
-  e.target.style.backgroundColor = "#00BFFF";
+  e.target.style.backgroundColor = singleColor.value;
 }
 
 // clears grid

@@ -30,6 +30,7 @@ h3 {
   padding: 15px;
 }
 
+/* Color picker */
 #color {
   width: 100px;
   height: 100px;
@@ -37,7 +38,7 @@ h3 {
   border: none;
   border-radius: 50%;
 }
-
+/* this makes the color picker a circle */
 input[type="color"]::-webkit-color-swatch {
   border: none;
   border-radius: 50%;
