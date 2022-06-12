@@ -15,10 +15,13 @@ const container = document.getElementById("container");
 const btn = document.getElementById("btn");
 const slider = document.getElementById("sizeSlider");
 const gridSizeIndicator = document.getElementById("sizeVal");
+const singleColor = document.getElementById("color");
+const allColors = document.getElementById("rgb");
 
 // SECTION: Event listeners
 btn.onclick = (e) => resetContainer(slider.value);
 slider.oninput = (e) => changeGridSize(slider.value);
+// allColors.onclick = (e) => changeColor();
 
 // SECTION: All specific functions
 function createDiv(size) {
@@ -59,6 +62,15 @@ function changeGridSize(size) {
 // This is the indicator above the slider saying '16 X 16' which means there are 16 x 16 squares.
 function gridSizeIndication(size) {
   gridSizeIndicator.innerHTML = `${size} X ${size}`;
+}
+
+//
+function changeColor(e) {
+  let x = Math.floor(Math.random() * 256); // range is 0-255
+  let y = Math.floor(Math.random() * 256);
+  let z = Math.floor(Math.random() * 256);
+  let thergb = "rgb(" + x + "," + y + "," + z + ")";
+  e.target.style.background = thergb;
 }
 
 // When page loads, this displays by default
