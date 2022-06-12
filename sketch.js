@@ -18,8 +18,8 @@ const gridSizeIndicator = document.getElementById("sizeVal");
 
 // SECTION: Event listeners
 btn.onclick = () => resetContainer();
-slider.onchange = (e) => changeGridSize(e);
-gridSizeIndicator.onchange = (e) => writeAboveSlider(e);
+slider.onchange = (e) => gridSizeIndication(slider.value);
+// slider.onchange = (e) => changeGridSize(e);
 
 // SECTION: All specific functions
 function createDiv(size) {
@@ -40,6 +40,7 @@ function createDiv(size) {
     function hoverChangeColor() {
       cell.style.backgroundColor = "#00BFFF";
       console.log("Works");
+      //   console.log(slider.value);
     }
   }
 }
@@ -56,13 +57,17 @@ function resetContainer() {
 }
 
 function changeGridSize(size) {
-  //   document.write(slider.value + "X" + slider.value);
-  console.log(slider.value);
+  console.log(size);
+  gridSizeIndicator(size);
+  clearContainer();
+  createDiv(size);
 }
 
-function gridSizeInidcation(size) {
-  gridSizeIndicator.innerHTML = "";
-  gridSizeIndicator.innerHTML = `${slider.value} X ${slider.value}`;
+function gridSizeIndication(size) {
+  //   gridSizeIndicator.innerHTML = "";
+  console.log("Hello");
+  console.log(size);
+  gridSizeIndicator.innerHTML = `${size} X ${size}`;
 }
 
 // When page loads, this displays by default
