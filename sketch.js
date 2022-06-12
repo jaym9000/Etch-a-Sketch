@@ -18,7 +18,7 @@ const gridSizeIndicator = document.getElementById("sizeVal");
 
 // SECTION: Event listeners
 btn.onclick = (e) => resetContainer(slider.value);
-slider.onchange = (e) => changeGridSize(slider.value);
+slider.oninput = (e) => changeGridSize(slider.value);
 
 // SECTION: All specific functions
 function createDiv(size) {
@@ -28,6 +28,7 @@ function createDiv(size) {
   for (let i = 0; i < size * size; i++) {
     const cell = document.createElement("div");
     cell.classList.add("square");
+    cell.style = "border: 1px solid black;";
     cell.addEventListener("mouseenter", hoverChangeColor);
     container.appendChild(cell);
   }
