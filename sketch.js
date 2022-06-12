@@ -18,7 +18,6 @@ const gridSizeIndicator = document.getElementById("sizeVal");
 
 // SECTION: Event listeners
 btn.onclick = (e) => resetContainer(slider.value);
-slider.onchange = (e) => gridSizeIndication(slider.value);
 slider.onchange = (e) => changeGridSize(slider.value);
 
 // SECTION: All specific functions
@@ -37,8 +36,6 @@ function createDiv(size) {
 //change color of div on hover
 function hoverChangeColor(e) {
   e.target.style.backgroundColor = "#00BFFF";
-  console.log("Works");
-  //   console.log(slider.value);
 }
 
 // clears grid
@@ -52,13 +49,14 @@ function resetContainer(size) {
   createDiv(size);
 }
 
+// Changes the amount of divs (squares) in the grid
 function changeGridSize(size) {
-  console.log(size);
   gridSizeIndication(size);
   clearContainer();
   createDiv(size);
 }
 
+// This is the indicator above the slider saying '16 X 16' which means there are 16 x 16 squares.
 function gridSizeIndication(size) {
   gridSizeIndicator.innerHTML = `${size} X ${size}`;
 }
