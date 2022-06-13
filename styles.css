@@ -13,10 +13,12 @@ h1,
 h3 {
   display: flex;
   justify-content: center;
+  box-shadow: inset;
 }
 
 .same-line {
   display: flex;
+  margin-right: 200px;
 }
 
 .side-box {

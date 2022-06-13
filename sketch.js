@@ -1,10 +1,8 @@
 // SECTION: Declaring const values
 const DEFAULT_GRID_SIZE = 16;
-const DEFAULT_COLOR = "#00BFFF";
 
 // SECTION: Declaring easier to use variables
 let defaultSize = DEFAULT_GRID_SIZE;
-let defaultColor = DEFAULT_COLOR;
 
 // SECTION: Reuseable methods
 function resize() {
@@ -22,17 +20,19 @@ const allColors = document.getElementById("rgb");
 // SECTION: Event listeners
 btn.onclick = (e) => resetContainer(slider.value);
 slider.oninput = (e) => changeGridSize(slider.value);
-// allColors.onclick = (e) => changeColor();
 
 // SECTION: All specific functions
 function createDiv(size) {
-  //   container.style.gridTemplateColumns = `repeat(${size}, 25px [col-start]`;
   container.style.gridTemplateColumns = `repeat(${size}, 1fr`;
   container.style.gridTemplateRows = `repeat(${size}, 1fr`;
   for (let i = 0; i < size * size; i++) {
     const cell = document.createElement("div");
     cell.classList.add("square");
     cell.addEventListener("mouseenter", hoverChangeColor);
+
+    allColors.addEventListener("click", function onClick(e) {
+      cell.addEventListener("mouseenter", randColor);
+    });
     container.appendChild(cell);
   }
 }
@@ -65,13 +65,14 @@ function gridSizeIndication(size) {
   gridSizeIndicator.innerHTML = `${size} X ${size}`;
 }
 
-//
-function changeColor(e) {
-  let x = Math.floor(Math.random() * 256); // range is 0-255
-  let y = Math.floor(Math.random() * 256);
-  let z = Math.floor(Math.random() * 256);
-  let thergb = "rgb(" + x + "," + y + "," + z + ")";
-  e.target.style.background = thergb;
+// random colors in Hex form
+function randColor() {
+  let values = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += values[Math.floor(Math.random() * 16)];
+  }
+  singleColor.value = color;
 }
 
 // When page loads, this displays by default
