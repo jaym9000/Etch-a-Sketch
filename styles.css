@@ -85,6 +85,7 @@ button {
   background-color: forestgreen;
   color: white;
   padding: 0 20px;
+  width: 100%;
 }
 /* 013220 */
 button:hover,
