@@ -1,3 +1,5 @@
+// Author: Jean-Marc Mahoro
+
 // SECTION: Declaring const values
 const DEFAULT_GRID_SIZE = 16;
 
