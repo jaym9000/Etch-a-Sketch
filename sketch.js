@@ -39,7 +39,7 @@ function createDiv(size) {
   }
 }
 
-//change color of div on hover
+// change color of div on hover
 function hoverChangeColor(e) {
   e.target.style.backgroundColor = singleColor.value;
 }
@@ -67,7 +67,7 @@ function gridSizeIndication(size) {
   gridSizeIndicator.innerHTML = `${size} X ${size}`;
 }
 
-// random colors in Hex form
+// Random colors in Hex form
 function randColor() {
   let values = "0123456789ABCDEF";
   let color = "#";
