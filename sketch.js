@@ -44,12 +44,12 @@ function hoverChangeColor(e) {
   e.target.style.backgroundColor = singleColor.value;
 }
 
-// clears grid
+// Clears grid
 function clearContainer() {
   container.innerHTML = "";
 }
 
-// clears grid and resets with a new grid of the same size as currently selected
+// Clears grid and resets with a new grid of the same size as currently selected
 function resetContainer(size) {
   clearContainer();
   createDiv(size);
