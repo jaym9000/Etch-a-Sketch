@@ -39,7 +39,7 @@ function createDiv(size) {
   }
 }
 
-// change color of div on hover
+// Change color of div on hover
 function hoverChangeColor(e) {
   e.target.style.backgroundColor = singleColor.value;
 }
